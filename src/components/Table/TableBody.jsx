@@ -1,9 +1,10 @@
 import React from 'react';
 import TableRow from './TableRow';
+import { TableBody as MuiTableBody } from '@mui/material';
 
 const TableBody = ({ data, level = 0, onRemove }) => {
     return (
-        <tbody>
+        <MuiTableBody>
             {data.map(item => (
                 <React.Fragment key={item.data.ID}>
                     <TableRow data={item.data} level={level} onRemove={onRemove} />
@@ -12,7 +13,7 @@ const TableBody = ({ data, level = 0, onRemove }) => {
                     ))}
                 </React.Fragment>
             ))}
-        </tbody>
+        </MuiTableBody>
     );
 }
 

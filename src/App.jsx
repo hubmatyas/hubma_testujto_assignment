@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TableBody from "./components/Table/TableBody";
 import dataSource from "./assets/data/example-data.json";
+import { Container, Table, TableHead, TableRow, TableCell } from '@mui/material';
 
 const App = () => {
     const [data, setData] = useState([]);
@@ -28,15 +29,17 @@ const App = () => {
     };
 
     return (
-        <table>
-            <thead>
-                <tr>
-                  {/* TODO: Výpis header */}
-                  <th>Name</th>
-                </tr>
-            </thead>
-            <TableBody data={data} onRemove={handleRemove} />
-        </table>
+        <Container>
+            <Table>
+                <TableHead>
+                    <TableRow>
+                      {/* TODO: Výpis header */}
+                      <TableCell>Name</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody data={data} onRemove={handleRemove} />
+            </Table>
+        </Container>
     );
 };
 
