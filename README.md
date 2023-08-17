@@ -32,6 +32,7 @@ Yeah I know, I at least used MUI to display the table. Less strain on eyes. 😎
 -   I would definitely work on the visual aspect of the application. The table is really laggy and moves when item gets deleted.
 -   The recursive data call is effective, but may cause performance issues - i would set a vertical limit (depthLimit lets say) and logging when it goes over that.
 -   I would also render only the cells that are in the window (lazyloading), not all of them at once. Pagination could help, but im not a fan of that in those data tables, because they often have filters and it could get messy (depends on the situation of course).
+- The button state is not handled well and the button should be hidden when the row has no children
 -   etc.
 
 _And i could fix the return statement in the extract header function, instead of writing cool markdown report :D_
